@@ -1,7 +1,6 @@
 from huggingface_hub import snapshot_download
 from pathlib import Path
 
-# Troque para "small", "medium" ou "large-v3"
 MODEL_NAME = "large-v3"
 
 destino = Path("modelos") / f"faster-whisper-{MODEL_NAME}"
