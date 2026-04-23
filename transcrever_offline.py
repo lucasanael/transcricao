@@ -48,7 +48,6 @@ def candidate_site_packages():
         if p and "site-packages" in p:
             paths.append(p)
 
-    # remove duplicados preservando ordem
     dedup = []
     seen = set()
     for p in paths:
@@ -73,13 +72,13 @@ def find_nvidia_dll_dirs():
             if os.path.isdir(full):
                 dll_dirs.append(full)
 
-        # fallback: procura qualquer pasta bin dentro de nvidia
+
         wildcard_bins = glob.glob(os.path.join(sp, "nvidia", "*", "bin"))
         for path in wildcard_bins:
             if os.path.isdir(path):
                 dll_dirs.append(path)
 
-    # remove duplicados
+
     final = []
     seen = set()
     for d in dll_dirs:
@@ -106,7 +105,7 @@ def inject_nvidia_dlls():
         except (AttributeError, FileNotFoundError, OSError):
             pass
 
-    # Também adiciona ao PATH do processo atual
+
     os.environ["PATH"] = os.pathsep.join(dll_dirs + [os.environ.get("PATH", "")])
 
     return dll_dirs
