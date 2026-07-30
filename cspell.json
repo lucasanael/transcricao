@@ -1,0 +1,23 @@
+{
+  "version": "0.2",
+  "language": "en,pt,pt_BR",
+  "words": [
+    "Baixando",
+    "cublas",
+    "cudnn",
+    "cuda",
+    "concluído",
+    "destino",
+    "faster",
+    "huggingface",
+    "modelo",
+    "modelos",
+    "NVRTC",
+    "reuniao",
+    "sucesso",
+    "Systran",
+    "transcricao",
+    "transcrever",
+    "Whisper"
+  ]
+}
